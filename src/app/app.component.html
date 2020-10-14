@@ -1,0 +1,45 @@
+<p>OffsetX</p>
+<span>{{this.offsetX}}</span>
+<br>
+<p>OffsetY</p>
+<span>{{this.offsetY}}</span>
+<br>
+<p>Visibility</p>
+<span>{{this.visbility}}</span>
+<div class="control-section">
+    <input type="button" value="Hidden" (click)="Change()">
+     <input type="button" value="Visible" (click)="ChangeVisibility()">
+     <input type="button" value="Change-Offset" (click)="ChangeWidth()">
+           <div id="diagram-space" class="sb-mobile-diagram">
+            <ejs-diagram #diagram id="diagram" width="1000px" height="700px"  >
+                <e-nodes>
+                      <e-node id='node1' [height]=80 [width]=180 [offsetX]='offsetX' [offsetY]='offsetY' >
+                         <e-node-annotations>
+                              <e-node-annotation content='Node1'>
+                              </e-node-annotation>
+                          </e-node-annotations>
+                         
+                      </e-node>
+                      <e-node id='node2' [height]=70 [width]=120 [offsetX]=300 [offsetY]=250>
+                          <e-node-annotations>
+                              <e-node-annotation content='Node2'>
+                              </e-node-annotation>
+                          </e-node-annotations>
+                      </e-node>
+                      <e-node id='node3' [height]=150 [width]=80 [offsetX]=300 [offsetY]=400>
+                          <e-node-annotations>
+                              <e-node-annotation content='Node3'>
+                              </e-node-annotation>
+                          </e-node-annotations>
+                      </e-node>
+                </e-nodes>
+                  <e-connectors>
+                  <e-connector id='flowChartConnector1' sourceID='node1' targetID='node2' [visible]="visbility">
+                  </e-connector>
+  
+                    <e-connector id='connector2' sourceID='node2' targetID='node3' [visible]="visbility">
+                  </e-connector>
+                  </e-connectors>
+              </ejs-diagram>
+        </div>
+    </div>
