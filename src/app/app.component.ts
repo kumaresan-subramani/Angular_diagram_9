@@ -31,16 +31,4 @@ export class AppComponent {
     this.diagram.dataBind();
   }
 
-   public ChangeVisibility() {
-    debugger; 
-    this.visbility = true;
-    this.diagram.dataBind();
-  }
-
-  public ChangeWidth() {
-    debugger;
-    this.offsetX = 700;
-    this.offsetY = 200;
-    this.diagram.dataBind();
-  }
 }
